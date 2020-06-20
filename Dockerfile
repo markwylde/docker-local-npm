@@ -1,6 +1,4 @@
-FROM node:6.0.0
-
-MAINTAINER Orlando Hohmeier <hello@orlandohohmeier.com>
+FROM node:12
 
 WORKDIR /local-npm
 ADD . /local-npm/
@@ -15,7 +13,7 @@ EXPOSE 16984
 
 VOLUME /data
 
-ENV BASE_URL='http://127.0.0.1:5080'
+ENV BASE_URL='http://0.0.0.0:5080'
 ENV DATA_DIRECTORY='/data'
 ENV REMOTE_REGISTRY='https://registry.npmjs.org'
 ENV REMOTE_REGISTRY_SKIMDB='https://skimdb.npmjs.com/registry'
